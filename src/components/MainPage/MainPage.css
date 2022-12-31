@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+body {
+    font-family: 'Poppins';
+    font-style: normal;
+}
+/* стили на весь компонент */
+.container {
+    /* width: 1920px; */
+    display: grid;
+    justify-content: center;
+}
+/* стили для центрирования header */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+/* стили на header */
+.logo {
+    width: 10%;
+    height: 48px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+}
+/* стили на logo */
+
+.navbar img {
+    width: 32px;
+    margin-right: 10px;
+}
+/* иконки корзины , понравивщихся , аккаунта */
+.navbar span{
+    text-align: center;
+    margin: 0;
+    padding: 0%;
+}
+.content {
+    display: grid;
+    justify-content: center;
+    margin-top: 5%;
+}
+/* стили на контент */
+.content img {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+}
+/* картинка зеленая адидас */
+.products {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+/* контентная часть продуктов */
+
+.search {
+    width: 42%;
+    height: 56px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 20px;
+    padding: 6px;
+}
+/* поиск */
+
+.products_list {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+}
+/* списоск продуктов */
+
+.product_card {
+    width: 210px;
+    height: 400px;
+    background: #FFFFFF;
+    border: 1px solid #F3F3F3;
+    border-radius: 40px;
+    box-sizing: border-box;
+    margin-bottom:10%;
+    padding: 5px;
+}
+/* карточки продуктов */
+
+.product_image{
+    width: 133px;
+    height: 240px;
+}
+/* картинки продуктов */

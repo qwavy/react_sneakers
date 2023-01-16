@@ -44,7 +44,7 @@ header {
     margin-top: 5%;
 }
 /* стили на контент */
-.content img {
+.content_img {
     display: grid;
     justify-content: center;
     width: 100%;
@@ -71,24 +71,110 @@ header {
     grid-auto-flow: row;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    justify-content: center;
 }
 /* списоск продуктов */
 
 .product_card {
-    width: 210px;
-    height: 400px;
+    width: 220px;
+    height: 600px;
     background: #FFFFFF;
     border: 1px solid #F3F3F3;
     border-radius: 40px;
     box-sizing: border-box;
     margin-bottom:10%;
-    padding: 5px;
+    padding: 12px;
+    margin-right: 10%;
 }
 /* карточки продуктов */
 
 .product_image{
-    width: 133px;
+    width: 190px;
     height: 240px;
 }
 /* картинки продуктов */
+.product_card .like{
+    width: 32px;
+}
+.product_price{
+    display: flex;
+    justify-content: space-between;
+}
+.active{
+    background-color: red;
+}
+.product
+.product_cart_image{
+    width: 30px;
+}
+.product_description{
+    font-size: 11px;
+}
+.sort_icon{
+    display: flex;
+    width: 40px;
+}
+.cart{
+    display: flex;
+}
+.favourite_button{
+    width: 41px;
+    margin-left: 10px;
+}
+
+.user_photo{
+    border-radius: 12px;
+}
+@media screen and (max-width:480px){
+    body{
+        /* margin-left: 20px; */
+    }
+    header{
+        width: 380px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 40px;
+    }
+    .logo {
+        width: 9%;
+        height: 16px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 48px;
+    }
+    .content{
+        width: 480px;
+        /* margin-left: 35px; */
+    }
+    .content_img{
+        width: 360px;
+    }
+    .products h1{
+        font-size: 18px;
+    }
+    .products_list {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .product_card{
+        width: 160px;
+        height: 450px;
+        padding: 10px;
+    }
+    .product_image{
+        width: 100px;
+        height: 150px;
+    }
+    .product_title{
+        font-size: 12px;
+    }
+    .product_description{
+        font-size: 8px;
+    }
+    .product_price{
+        font-size: 12px;
+    }
+}

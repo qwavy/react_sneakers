@@ -3,7 +3,7 @@ import { observer } from "mobx-react-lite"
 
 // продукты с mobx
 
-import { auth } from "../../firebase"
+// import { auth } from "../../firebase"
 import { signInWithGoogle } from '../../firebase';
 
 // firbase
@@ -12,14 +12,23 @@ import './MainPage.css'
 // стили на css
 
 import cart_logo from '../../images/cart logo.png'
-import login_img from '../../images/login.png'
 import likes from '../../images/likes.png'
+import login_img from '../../images/login.png'
 import adidas_ad from '../../images/adidas_superstar.png'
 
+import grey_favourite from '../../images/grey_favourite.svg'
+import red_favourite from '../../images/red_favourite.png'
+
+import added_cart from '../../images/added_cart.svg'
+import add_cart from '../../images/add_cart.png'
 // картинки для верстки
 
 import SortProducts from './../SortProducts/SortProducts';
 import SearchProducts from "../SearchProducts/SearchProducts"
+import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+import SortByCategory from "../SortProducts/SortByCategory";
+import { auth } from './../../firebase';
 
 // другие компоненты
 
@@ -27,48 +36,93 @@ import SearchProducts from "../SearchProducts/SearchProducts"
 
 const MainPage = () => {
 
+    const [copyProducts, setCopyProdcust] = useState([...products.products])
+
+    useEffect(() => {
+        setCopyProdcust(products.products)
+    }, [products.products])
+
+    useEffect(() => {
+        const result = products.favouritesProducts.filter(product => product.favourite = false)
+    },[products.products])
+
     const HandleFavourite = (id) => {
-        products.products[id].favourite = true
-    } 
+        products.products[id - 1].favourite = !products.products[id - 1].favourite
+
+
+        if (!products.favouritesProducts.includes(products.products[id - 1])) {
+            products.favouritesProducts.push(products.products[id - 1])
+        }
+        if (products.products[id - 1].favourite == false) {
+            products.favouritesProducts.splice(id - 1, 1)
+        }
+
+    }
+    const HandleCart = (id) => {
+        if(products.products[id - 1].isCart === false){
+
+            products.products[id - 1].isCart = !products.products[id - 1].isCart
+            products.cart.push(products.products[id - 1])
+            for (let i = 0; i < products.cart.length; i++) {
+                products.cart_total += products.cart[i].price
+            }
+        }
+        else{
+            products.products[id - 1].isCart = !products.products[id - 1].isCart
+
+        }
+        console.log(products.products[id - 1].title)
+    }
 
     return (
         <div className="container">
-
-            <button className="button signout" onClick={() => auth.signOut()}>signOUT</button>
-
-                <header>
-                    <div className="logo">
-                        <span>shopCart</span>
-                    </div>
-                    <div className="navbar">
-                        <img src={cart_logo} />
-                        <img src={likes} />
-                        {products.user ? <img src={products.user._delegate.photoURL} className="user_photo"/> : <img src={login_img} alt='photo_image' />}
-                        
-                    </div>
-                </header>
-                <div className="content">
-                    <img src={adidas_ad} />
-                    <div className="products">
-                        <h1>products</h1>
-                        {/* <div className="search"> */}
-                        {/* <input className="search" placeholder="Search" /> */}
-                        <SearchProducts/>
-                        {/* </div> */}
-                    </div>
-                    <SortProducts/>
-                    <div className="products_list">
-                        {products.products.map((product) => <div className='product_card' key={product.id}>
-                            <img src={product.image} className="product_image"/>
-                            <p>{product.title}</p>
-                            <div className='products_price'>
-                                <p>{product.price}$</p>
-                                {/* <p className='discount'>-{product.discount}% off</p> */}
-                            </div>
-                            <button onClick={() => HandleFavourite(product.id)}>favourite</button>
-                        </div>)}
-                    </div>
+            <header>
+                <div className="logo">
+                    <span>shopCart</span>
                 </div>
+                <div className="navbar">
+                    <Link to="/Cart">
+                        <img src={cart_logo} />
+                    </Link>                    
+                    <Link to="/Favourites">
+                        <img src={likes} />
+                    
+                    </Link>
+                    
+                        {products.user ? <Link to="/Profile"><img src={products.user._delegate.photoURL} className="user_photo" /></Link> : <img src={login_img} alt='photo_image' onClick={signInWithGoogle}/>}
+
+                </div>
+            </header>
+            <div className="content">
+                <img src={adidas_ad} className="content_img"/>
+                <div className="products">
+                    <h1>products</h1>
+                    <SearchProducts />
+                </div>
+                <SortProducts products={products.products}/>
+
+            <SortByCategory/>
+
+                <div className="products_list">
+                    {copyProducts.map((product) => <div className='product_card' key={product.id}>
+                        <div className="favourite_button">
+                            {product.favourite ? <img onClick={() => HandleFavourite(product.id)} src={red_favourite} className="test" /> : <img onClick={() => HandleFavourite(product.id)} src={grey_favourite} className="test" />}
+                        </div>
+
+                        <img src={product.image} className="product_image" />
+                            <p className="product_title">{product.title}</p>
+                            <p className="product_description">{product.description}</p>
+                        <div className='product_price'>
+                            <p>{product.price}$</p>
+                            <div className='product_cart_image'>
+
+                            {   product.isCart ? <img onClick={() => HandleCart(product.id)} src={added_cart}  /> : <img onClick={() => HandleCart(product.id)} src={add_cart} className="product_cart_image" />}
+                            </div>
+                        </div>
+
+                    </div>)}
+                </div>
+            </div>
 
 
         </div>

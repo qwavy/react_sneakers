@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+.card_details{
+    width: 600px;
+    height: 56px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 20px;
+    padding: 6px;
+    padding: 10px;
+}
+.card_details::placeholder{
+    font-family: 'Poppins';
+    font-style: normal;
+}.card_details::content{
+    font-family: 'Poppins';
+    font-style: normal;
+}
+.checkbox_div{
+    /* display: grid; */
+}
+.shipping{
+    width: 100%;
+}
+.city_div{
+    margin-top: 3%;
+
+}
+.country_div{
+    margin-top: 3%;
+
+}
+.adress_div{
+    margin-top: 3%;
+}
+.name_details{
+    width: 280px;
+    height: 56px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 20px;
+    padding: 6px;   
+    margin-right: 20px;
+    padding: 10px;
+
+}
+.conform_button{
+    
+}
+.red{
+    color: red;
+}
+.green{
+    color: lightgreen;
+}

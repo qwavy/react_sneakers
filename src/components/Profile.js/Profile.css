@@ -1,0 +1,26 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@500;700&display=swap');
+
+
+
+.profile_avatar{
+    display: flex;
+    justify-content:flex-end ;
+    border-radius: 100%;
+    width: 200px;
+}
+.profile_name{
+    font-family: 'Montserrat';
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+}
+.profile_name{
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+.order p{
+    font-family: 'Montserrat';
+    font-style: normal;
+}

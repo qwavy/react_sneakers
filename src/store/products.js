@@ -18,6 +18,7 @@ import table from '../images/products/table.png'
 import single_seater from '../images/products/single-seater.png'
 import tea_table from '../images/products/tea_table.png'
 import sofa from '../images/products/sofa.png'
+import adidas_shoes from '../images/products/adidas_shoes.jpg'
 
 class Products {
     constructor(){
@@ -40,7 +41,9 @@ class Products {
         {id:14,title:"STAR WORK C Shaped End Table",price:49,description:"Small Side Table for Living Room?With simple stylish design, the C shaped end table works well As beside desk, laptop table, sofa side table, under couch table, chairside table, TV tray for eating ,suitable for any decor of your room",category:"furniture",image:table,rating:{rate:4.1,count:32}, favourite:false, discount:10 , isCart:false},
         {id:15,title:"Furniture Kart wrought iron Single",price:199,description:"High-quality swing: hanging basket Swing Chair adds a fun lounge vibe to your Outdoor space. Constructed with durable black-brown faux Ratan Wicker and a sturdy iron frame, its easy to care for and built to last",category:"furniture",image:single_seater,rating:{rate:4.5,count:17}, favourite:false, discount:5 , isCart:false},
         {id:16,title:"Lukzer Engineered Wood Coffee Center",price:99,description:"Made of particle board sheet, it is environmentally friendly, has strong texture and is not easy to be deformed, easy to clean, scratch resistant. Beautiful appearance, easy to install and use.",category:"furniture",image:tea_table,rating:{rate:4.4,count:31}, favourite:false, discount:10 , isCart:false},
-        {id:17,title:"Kusum Handicrafts Wooden 6 Seater",price:399,description:"Brand-Kusum HandicraftsMaterial: Sheesham WoodStyle: ModernSleek Contemporary Styling, This Sofa Set Features Clean Lines Which Will Make It An Elegant Addition To Any Existing Living Room, Office, Or Bedroom Decor.",category:"furniture",image:sofa,rating:{rate:4.0,count:20},favourite:false,discount:5 , isCart:false},]
+        {id:17,title:"Kusum Handicrafts Wooden 6 Seater",price:399,description:"Brand-Kusum HandicraftsMaterial: Sheesham WoodStyle: ModernSleek Contemporary Styling, This Sofa Set Features Clean Lines Which Will Make It An Elegant Addition To Any Existing Living Room, Office, Or Bedroom Decor.",category:"furniture",image:sofa,rating:{rate:4.0,count:20},favourite:false,discount:5 , isCart:false},
+        {id:18,title:"Adidas Originals Unisex-Adult Stan Smith",price:99,description:"'ve always thought of [the Stan Smith] like a canvas. The designers at a and you can always recognize it from a long way away — Stan Smith",category:"exclusive",image:adidas_shoes,rating:{rate:4.9,count:49},favourite:false,isCart:false,discount:10}
+    ]
 
     test = 123
 

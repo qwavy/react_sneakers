@@ -7,8 +7,6 @@
     justify-content: space-around;
     height: 150px;
     width: 700px;
-    /* box-shadow: 3px 4px 5px 6px grey; */
-    /* background-color: aqua; */
 }
 .trash_can{
     width: 30px;
@@ -35,4 +33,12 @@
     justify-content: center;
     align-items: center;
     align-content: center;
+}
+@media screen and (max-width:480px) {
+    .cart_card{
+        width: 250px;
+    }
+    .checkout_button{
+        width: 200px;
+    }
 }

@@ -42,11 +42,35 @@
 
 }
 .conform_button{
-    
+    width: 80px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: lightgreen;
+    border: none;
+    color: white;
 }
 .red{
     color: red;
 }
 .green{
     color: lightgreen;
+}
+@media screen and (max-width:480px) {
+    .contact h1{
+        font-size: 16px;
+    }
+    .shipping h1{
+        font-size: 16px;
+    }
+    .card_details{
+        width: 250px;
+    }
+    .name_details{
+        display: flex;
+        width: 150px;
+    }
+    .payment h1{
+        font-size: 16px;
+
+    }
 }

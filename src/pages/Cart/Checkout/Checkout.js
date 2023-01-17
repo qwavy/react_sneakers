@@ -15,6 +15,8 @@ import { PaymentInputsWrapper, usePaymentInputs } from 'react-payment-inputs';
 import images from 'react-payment-inputs/images';
 import { Link } from 'react-router-dom';
 import products from '../../../store/products';
+
+import CustomAlert from '../../../components/CustomAlert/CustomAlert';
 // import observer from './../Cart';
 
 const Checkout = () => {
@@ -103,7 +105,7 @@ const Checkout = () => {
                 <p className='red'>total {products.cart_total}</p>
                 <p className='green'>delivery 0</p>
             </div>
-            <button className='conform_button' onClick={CheckoutConform}>conform</button>
+            {products.user ? <button className='conform_button' onClick={CheckoutConform}>confirm</button> : <CustomAlert/>}
 
         </div>
 

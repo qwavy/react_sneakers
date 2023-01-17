@@ -6,6 +6,9 @@ import likes from '../../images/likes.png'
 import login_img from '../../images/login.png'
 
 
+import firebase
+
+from "../../firebase"
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase"
 import { signInWithGoogle } from '../../firebase';
@@ -20,10 +23,17 @@ const Profile = () => {
     const [yourOrders, setYourOrders] = useState([])
 
 
+
+
     useEffect(() => {
         const result = products.orderInformation.filter(order => order.email == products.user.email)
         setYourOrders(result)
     }, [products.orderInformation])
+
+    const LogOut = () => {
+        firebase.logout()
+        products.user = null
+    }
 
     const click = () => {
         console.log(products.user)
@@ -66,7 +76,8 @@ const Profile = () => {
 
                 </div>)}
             </div>
-
+            <button  onClick={() => auth.signOut()}>signout</button>
+            <button className="button signout" onClick={() => auth.signOut()}>Sign out</button>
         </div>
     )
 }

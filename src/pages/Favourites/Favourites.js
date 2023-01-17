@@ -19,7 +19,6 @@ const Favourites = () => {
 
 
 
-
     return (
         <div className="container">
             <header>
@@ -39,17 +38,17 @@ const Favourites = () => {
 
                 </div>
             </header>
-            <h1>Favourite</h1>
+            <h1 className="content_favourite_title">Favourite</h1>
 
             <div className="favourties_list">
-                {products.favouritesProducts > 0 ? 
+                {products.favouritesProducts.length > 0 ? 
                     products.favouritesProducts.map((product) => <div className="favourites_card" key={product.id}>
-                        <img src={product.image} />
+                        <img src={product.image} className="favourites_image"/>
                         <p className="favourite_title">{product.title}</p>
                         <p className="favourite_description">{product.description}</p>
                         <p className="favourite_price">{product.price}$</p>
                     </div>)
-                : <div className="empty_cart"><img src={no_favourite}/><p>Favourite is empty</p></div>}
+                : <div className="empty_cart"><img src={no_favourite} className="empty_image"/><p>Favourite is empty</p></div>}
 
             </div>
         </div>

@@ -129,10 +129,9 @@ header {
         /* margin-left: 20px; */
     }
     header{
-        width: 380px;
+        width: 300px;
         display: flex;
         justify-content: space-between;
-        margin-left: 40px;
     }
     .logo {
         width: 9%;
@@ -176,5 +175,55 @@ header {
     }
     .product_price{
         font-size: 12px;
+    }
+}
+@media screen and (max-width:768px) {
+    header{
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        width: 10%;
+        height: 32px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 48px;
+    }
+    .content{
+        width: 600px;
+        /* margin-left: 35px; */
+    }
+    .content_img{
+        width: 600px;
+    }
+    .products h1{
+        font-size: 18px;
+    }
+    .products_list {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .product_card{
+        width: 180px;
+        height: 480px;
+        padding: 10px;
+    }
+    .product_image{
+        width: 100px;
+        height: 150px;
+    }
+    .product_title{
+        font-size: 14px;
+    }
+    .product_description{
+        font-size: 9px;
+    }
+    .product_price{
+        font-size: 14px;
     }
 }

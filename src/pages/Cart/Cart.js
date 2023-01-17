@@ -21,6 +21,9 @@ const Cart = () => {
     const HandleDeleteCart = (id) => {
         const objWithIdIndex = products.cart.findIndex((obj) => obj.id === id);
 
+        if(objWithIdIndex > -1){
+            products.cart_total -= products.products[objWithIdIndex].price
+        }
         if (objWithIdIndex > -1) {
             products.cart.splice(objWithIdIndex, 1);
         }

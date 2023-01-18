@@ -100,7 +100,7 @@ const MainPage = () => {
                     <h1>products</h1>
                     <SearchProducts />
                 </div>
-                <SortProducts products={products.products} />
+                <SortProducts products={copyProducts} />
 
                 <SortByCategory />
 

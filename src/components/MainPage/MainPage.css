@@ -76,7 +76,7 @@ header {
 
 .product_card {
     width: 220px;
-    height: 600px;
+    height: 630px;
     background: #FFFFFF;
     border: 1px solid #F3F3F3;
     border-radius: 40px;
@@ -124,17 +124,14 @@ header {
 .user_photo{
     border-radius: 12px;
 }
-@media screen and (max-width:480px){
-    body{
-        /* margin-left: 20px; */
-    }
+@media screen and (min-width:400px) and (max-width:600px){
     header{
         width: 300px;
         display: flex;
         justify-content: space-between;
     }
     .logo {
-        width: 9%;
+        width: 10%;
         height: 16px;
         font-family: 'Poppins';
         font-style: normal;
@@ -177,7 +174,7 @@ header {
         font-size: 12px;
     }
 }
-@media screen and (max-width:768px) {
+@media screen and (min-width:600px) and (max-width:1000px){
     header{
         width: 600px;
         display: flex;
@@ -226,4 +223,7 @@ header {
     .product_price{
         font-size: 14px;
     }
+}
+@media screen and (min-width:1000px) {
+    
 }

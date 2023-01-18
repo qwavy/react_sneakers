@@ -11,6 +11,8 @@ const SortProducts = () => {
 
     const [selectValue, setSelectValue] = useState("")
 
+    
+
     useEffect(() => {
         switch (selectValue) {
             case "popularity":
@@ -33,12 +35,14 @@ const SortProducts = () => {
     
     const sortByPopularity = () => {
         products.products.sort((a, b) => b.rating.count - a.rating.count)
+        
     }
     const sortByPrice = () => {
         products.products.sort((a, b) => a.price - b.price)
     }
     const sortByPriceLow = () => {
         products.products.sort((a, b) => b.price - a.price)
+    
     }
     const sortByRating = () => {
         products.products.sort((a, b) => b.rating.rate - a.rating.rate)

@@ -60,8 +60,9 @@ const Profile = () => {
                     <p className="profile_email">{products.user.email}</p>
                 </div>
                 <div>
-                    <h1>Orders</h1>
                     {yourOrders.map((order) => <div key={order.length + 1} className="order">
+                        <h1>Orders</h1>
+
                         <p>recipient name:{order.name}</p>
                         <p>country {order.country}</p>
                         <p>city: {order.city}</p>

@@ -19,6 +19,8 @@ import adidas_ad from '../../images/adidas_superstar.png'
 import grey_favourite from '../../images/grey_favourite.svg'
 import red_favourite from '../../images/red_favourite.png'
 
+import star from '../../images/star.png'
+
 import added_cart from '../../images/added_cart.svg'
 import add_cart from '../../images/add_cart.png'
 // картинки для верстки
@@ -37,10 +39,10 @@ import SortByCategory from "../SortProducts/SortByCategory";
 const MainPage = () => {
 
 
-    const [copyProducts, setCopyProdcust] = useState([...products.products])
+    const [copyProducts, setCopyProducts] = useState([...products.products])
 
     useEffect(() => {
-        setCopyProdcust(products.products)
+        setCopyProducts(products.products)
     }, [products.products])
 
     useEffect(() => {
@@ -100,9 +102,13 @@ const MainPage = () => {
                     <h1>products</h1>
                     <SearchProducts />
                 </div>
-                <SortProducts products={copyProducts} />
+                <div className="sort_container">
 
-                <SortByCategory />
+                    <SortProducts />
+
+                    <SortByCategory setCopyProducts={setCopyProducts} />
+                </div>
+
 
                 <div className="products_list">
                     {copyProducts.map((product) => <div className='product_card' key={product.id}>
@@ -120,7 +126,6 @@ const MainPage = () => {
                                 {product.isCart ? <img onClick={() => HandleCart(product.id)} src={added_cart} /> : <img onClick={() => HandleCart(product.id)} src={add_cart} className="product_cart_image" />}
                             </div>
                         </div>
-
                     </div>)}
                 </div>
             </div>

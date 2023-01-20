@@ -4,18 +4,21 @@ body {
     font-family: 'Poppins';
     font-style: normal;
 }
+
 /* стили на весь компонент */
 .container {
     /* width: 1920px; */
     display: grid;
     justify-content: center;
 }
+
 /* стили для центрирования header */
 header {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
+
 /* стили на header */
 .logo {
     width: 10%;
@@ -26,35 +29,41 @@ header {
     font-size: 32px;
     line-height: 48px;
 }
+
 /* стили на logo */
 
 .navbar img {
     width: 32px;
     margin-right: 10px;
 }
+
 /* иконки корзины , понравивщихся , аккаунта */
-.navbar span{
+.navbar span {
     text-align: center;
     margin: 0;
     padding: 0%;
 }
+
 .content {
     display: grid;
     justify-content: center;
     margin-top: 5%;
 }
+
 /* стили на контент */
 .content_img {
     display: grid;
     justify-content: center;
     width: 100%;
 }
+
 /* картинка зеленая адидас */
 .products {
     display: flex;
     justify-content: space-between;
     margin-top: 5%;
 }
+
 /* контентная часть продуктов */
 
 .search {
@@ -64,6 +73,7 @@ header {
     border-radius: 20px;
     padding: 6px;
 }
+
 /* поиск */
 
 .products_list {
@@ -72,6 +82,7 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
+
 /* списоск продуктов */
 
 .product_card {
@@ -81,55 +92,97 @@ header {
     border: 1px solid #F3F3F3;
     border-radius: 40px;
     box-sizing: border-box;
-    margin-bottom:10%;
+    margin-bottom: 10%;
     padding: 12px;
     margin-right: 10%;
 }
+
 /* карточки продуктов */
 
-.product_image{
+.product_image {
     width: 190px;
     height: 240px;
 }
+
 /* картинки продуктов */
-.product_card .like{
+.product_card .like {
     width: 32px;
 }
-.product_price{
+
+.product_price {
     display: flex;
     justify-content: space-between;
 }
-.active{
+
+.active {
     background-color: red;
 }
-.product
-.product_cart_image{
+
+.product .product_cart_image {
     width: 30px;
 }
-.product_description{
+
+.product_description {
     font-size: 11px;
 }
-.sort_icon{
+
+.sort_icon {
     display: flex;
     width: 40px;
 }
-.cart{
+
+.cart {
     display: flex;
 }
-.favourite_button{
+
+.favourite_button {
     width: 41px;
     margin-left: 10px;
 }
 
-.user_photo{
+.user_photo {
     border-radius: 12px;
 }
-@media screen and (min-width:400px) and (max-width:600px){
-    header{
+
+.sort_container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.category_button_list {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.category_button {
+    width: 90px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+}
+
+.sort_select {
+    width: 250px;
+    border: none;
+    font-family: 'Poppins';
+    font-style: normal;
+}
+
+.star {
+    width: 16px;
+}
+
+@media screen and (min-width:400px) and (max-width:600px) {
+    header {
         width: 300px;
         display: flex;
         justify-content: space-between;
     }
+
     .logo {
         width: 10%;
         height: 16px;
@@ -139,47 +192,70 @@ header {
         font-size: 18px;
         line-height: 48px;
     }
-    .content{
+
+    .content {
         width: 480px;
         /* margin-left: 35px; */
     }
-    .content_img{
+
+    .content_img {
         width: 360px;
     }
-    .products h1{
+
+    .products h1 {
         font-size: 18px;
     }
+
     .products_list {
         display: grid;
         grid-auto-flow: row;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
-    .product_card{
+
+    .product_card {
         width: 160px;
         height: 450px;
         padding: 10px;
     }
-    .product_image{
+
+    .product_image {
         width: 100px;
         height: 150px;
     }
-    .product_title{
+
+    .product_title {
         font-size: 12px;
     }
-    .product_description{
+
+    .product_description {
         font-size: 8px;
     }
-    .product_price{
+
+    .product_price {
         font-size: 12px;
     }
+    .sort_container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5%;
+    }
+    .category_button_list {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 5%;
+    }
 }
-@media screen and (min-width:600px) and (max-width:1000px){
-    header{
+
+@media screen and (min-width:600px) and (max-width:1000px) {
+    header {
         width: 600px;
         display: flex;
         justify-content: space-between;
     }
+
     .logo {
         width: 10%;
         height: 32px;
@@ -189,41 +265,49 @@ header {
         font-size: 22px;
         line-height: 48px;
     }
-    .content{
+
+    .content {
         width: 600px;
         /* margin-left: 35px; */
     }
-    .content_img{
+
+    .content_img {
         width: 600px;
     }
-    .products h1{
+
+    .products h1 {
         font-size: 18px;
     }
+
     .products_list {
         display: grid;
         grid-auto-flow: row;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
-    .product_card{
+
+    .product_card {
         width: 180px;
         height: 480px;
         padding: 10px;
     }
-    .product_image{
+
+    .product_image {
         width: 100px;
         height: 150px;
     }
-    .product_title{
+
+    .product_title {
         font-size: 14px;
     }
-    .product_description{
+
+    .product_description {
         font-size: 9px;
     }
-    .product_price{
+
+    .product_price {
         font-size: 14px;
     }
 }
-@media screen and (min-width:1000px) {
-    
-}
+
+@media screen and (min-width:1000px) {}

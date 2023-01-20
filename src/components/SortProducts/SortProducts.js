@@ -52,7 +52,7 @@ const SortProducts = () => {
         <>
             <div className="sort_icon">
                 <img src={sort_icon} className="product_cart_image" style={{width: "40px"}}/>
-                <select onChange={(event) => setSelectValue(event.target.value)}>
+                <select onChange={(event) => setSelectValue(event.target.value)} className="sort_select">
                     <option value="popularity">sort by popularity</option>
                     <option value="priceHigh">sort by price high</option>
                     <option value="priceLow">sort by price low</option>

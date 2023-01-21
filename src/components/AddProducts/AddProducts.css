@@ -1,0 +1,75 @@
+.container{
+    display: grid;
+    justify-content: center;
+    
+}
+.register_card{
+    height: 800px;
+    width: 1000px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: white;
+}
+.register_logo p{
+    padding: 0;
+    display: grid;
+    /* place-items: jus; */
+    justify-content: center;
+}
+label{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 24px;
+}
+input{
+
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-radius: 20px;
+    padding: 16px;
+}
+.register_content{
+    display: grid;
+    align-items: center;
+}
+.register_email{
+
+    display: grid;
+    /* justify-content: center; */
+    align-items: center;
+}
+.register_email_label{
+    margin:10;
+}
+.register_password{
+    /* display: flex;
+    justify-content: center; */
+}
+.register_button_div{
+    display: flex;
+    justify-content: space-around;
+}
+.register_button{
+    margin-top: 60px;
+    background-color:#FFAE5D;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    height: 60px;
+    width: 600px;
+}
+.google_button{
+    width: 200px;
+    border:none; 
+    border-radius:10px; 
+
+}
+.google_icon{
+    width: 46px;
+    height: 46px;
+    margin-right: 15px;
+}
+.register_logo_div{
+    display: flex;
+    justify-content: center;
+}

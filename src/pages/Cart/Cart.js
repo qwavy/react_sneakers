@@ -6,6 +6,7 @@ import { signInWithGoogle } from '../../firebase';
 
 
 import { Link } from "react-router-dom"
+import { useEffect } from "react";
 
 import cart_logo from '../../images/cart logo.png'
 import login_img from '../../images/login.png'
@@ -17,6 +18,15 @@ import no_cart from '../../images/no_cart.png'
 import './Cart.css'
 
 const Cart = () => {
+
+    useEffect(() => {
+        let sum = 0
+        for(let i = 0;i < products.cart.length;i++){
+            sum+=products.cart[i].price
+            console.log(sum)
+        }
+        products.cart_total = sum
+    }, [products.cart])
 
     const HandleDeleteCart = (id) => {
         const objWithIdIndex = products.cart.findIndex((obj) => obj.id === id);

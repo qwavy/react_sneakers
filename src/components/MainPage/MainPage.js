@@ -49,6 +49,8 @@ const MainPage = () => {
         const result = products.favouritesProducts.filter(product => product.favourite = false)
     }, [products.products])
 
+
+
     const HandleFavourite = (id) => {
         products.products[id - 1].favourite = !products.products[id - 1].favourite
 
@@ -66,9 +68,9 @@ const MainPage = () => {
 
             products.products[id - 1].isCart = !products.products[id - 1].isCart
             products.cart.push(products.products[id - 1])
-            for (let i = 0; i < products.cart.length; i++) {
-                products.cart_total += products.cart[i].price
-            }
+            // for (let i = 0; i < products.cart.length; i++) {
+            //     products.cart_total += products.cart[i].price
+            // }
         }
         else {
             products.products[id - 1].isCart = !products.products[id - 1].isCart

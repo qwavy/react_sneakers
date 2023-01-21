@@ -15,7 +15,7 @@ import Cart from './pages/Cart/Cart';
 import Checkout from './pages/Cart/Checkout/Checkout';
 import Favourites from './pages/Favourites/Favourites';
 import Profile from './components/Profile.js/Profile';
-
+import AddProducts from './components/AddProducts/AddProducts';
 
 function App() {
 
@@ -28,13 +28,13 @@ function App() {
 
   return (
     <div className="App">
-      {/* <MainPage/> */}
       <div>
         <Link to="/Profile">Profile</Link>
         <Link to="/Cart">Cart</Link>
         <Link to="/Home">Home</Link>
         <Link to="/Checkout">Checkout</Link>
         <Link to="/Favourites">Favourites</Link>
+        <Link to="/AddProducts">AddProducts</Link>
       </div>
       <div>
         <Routes>
@@ -43,6 +43,7 @@ function App() {
           <Route path='/Cart' element={<Cart/>}/>
           <Route path='/Checkout' element={<Checkout/>}/>
           <Route path='/Favourites' element={<Favourites/>}/>
+          <Route path='/AddProducts' element={<AddProducts/>}/>
         </Routes>
       </div>
     </div>

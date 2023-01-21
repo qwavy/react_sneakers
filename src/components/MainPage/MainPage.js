@@ -68,9 +68,6 @@ const MainPage = () => {
 
             products.products[id - 1].isCart = !products.products[id - 1].isCart
             products.cart.push(products.products[id - 1])
-            // for (let i = 0; i < products.cart.length; i++) {
-            //     products.cart_total += products.cart[i].price
-            // }
         }
         else {
             products.products[id - 1].isCart = !products.products[id - 1].isCart
@@ -99,7 +96,6 @@ const MainPage = () => {
                 </div>
             </header>
             <div className="content">
-                <img src={adidas_ad} className="content_img" />
                 <div className="products">
                     <h1>products</h1>
                     <SearchProducts />
@@ -108,7 +104,7 @@ const MainPage = () => {
 
                     <SortProducts />
 
-                    <SortByCategory setCopyProducts={setCopyProducts} />
+                        <SortByCategory setCopyProducts={setCopyProducts} />
                 </div>
 
 

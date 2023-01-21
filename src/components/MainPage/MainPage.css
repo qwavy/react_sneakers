@@ -176,7 +176,13 @@ header {
     width: 16px;
 }
 
-@media screen and (min-width:400px) and (max-width:600px) {
+
+
+@media screen and (min-width:320px) and (max-width:430px) {
+    body{
+        margin-left: 5%;
+    }
+    
     header {
         width: 300px;
         display: flex;
@@ -184,24 +190,22 @@ header {
     }
 
     .logo {
-        width: 10%;
-        height: 16px;
+        width: 9%;
+        height: 32px;
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 700;
-        font-size: 18px;
+        font-size: 22px;
         line-height: 48px;
     }
 
     .content {
-        width: 480px;
-        /* margin-left: 35px; */
+        width: 300px;
     }
 
-    .content_img {
-        width: 360px;
+    .products{
+        width: 300px;
     }
-
     .products h1 {
         font-size: 18px;
     }
@@ -215,8 +219,8 @@ header {
 
     .product_card {
         width: 160px;
-        height: 450px;
-        padding: 10px;
+        height: 480px;
+        padding: 8px;
     }
 
     .product_image {
@@ -235,21 +239,31 @@ header {
     .product_price {
         font-size: 12px;
     }
-    .sort_container {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 5%;
-    }
-    .category_button_list {
-        width: 200px;
+    .category_button_list{
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        margin-left: 5%;
+        width: 100px;
     }
+    .category_button{
+        margin-top: 5%;
+    }
+    .sort_container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sort_select{
+        display:grid;
+    }
+    .product_cart_image{
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        align-content: center;
+    }
+    
 }
 
-@media screen and (min-width:600px) and (max-width:1000px) {
+@media screen and (min-width:768px) and (max-width:1000px) {
     header {
         width: 600px;
         display: flex;
@@ -268,7 +282,6 @@ header {
 
     .content {
         width: 600px;
-        /* margin-left: 35px; */
     }
 
     .content_img {
@@ -309,5 +322,6 @@ header {
         font-size: 14px;
     }
 }
+
 
 @media screen and (min-width:1000px) {}

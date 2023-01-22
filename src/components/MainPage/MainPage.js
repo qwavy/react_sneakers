@@ -1,11 +1,8 @@
 import products from "../../store/products"
 import { observer } from "mobx-react-lite"
+// mobx
 
-// продукты с mobx
-
-// import { auth } from "../../firebase"
 import { signInWithGoogle } from '../../firebase';
-
 // firbase
 
 import './MainPage.css'
@@ -14,12 +11,11 @@ import './MainPage.css'
 import cart_logo from '../../images/cart logo.png'
 import likes from '../../images/likes.png'
 import login_img from '../../images/login.png'
-import adidas_ad from '../../images/adidas_superstar.png'
+// header картинки
 
 import grey_favourite from '../../images/grey_favourite.svg'
 import red_favourite from '../../images/red_favourite.png'
-
-import star from '../../images/star.png'
+// картинки для избранного
 
 import added_cart from '../../images/added_cart.svg'
 import add_cart from '../../images/add_cart.png'
@@ -48,19 +44,20 @@ const MainPage = () => {
     useEffect(() => {
         const result = products.favouritesProducts.filter(product => product.favourite = false)
     }, [products.products])
-
+    // фильтрация если у продукта favourite равен false
 
 
     const HandleFavourite = (id) => {
         products.products[id - 1].favourite = !products.products[id - 1].favourite
-
-
+        
         if (!products.favouritesProducts.includes(products.products[id - 1])) {
             products.favouritesProducts.push(products.products[id - 1])
         }
+        // если в избранных продуктах нету выбраного продукта то нужно его добавить
         if (products.products[id - 1].favourite == false) {
             products.favouritesProducts.splice(id - 1, 1)
         }
+        // если у продукта значение favourite равен false То удалить его
 
     }
     const HandleCart = (id) => {
@@ -69,18 +66,21 @@ const MainPage = () => {
             products.products[id - 1].isCart = !products.products[id - 1].isCart
             products.cart.push(products.products[id - 1])
         }
+        // если в корзине нету выбраного продукта то нужно его добавить
+
         else {
             products.products[id - 1].isCart = !products.products[id - 1].isCart
-
         }
-        console.log(products.products[id - 1].title)
+        
     }
 
     return (
         <div className="container">
             <header>
                 <div className="logo">
-                    <span>shopCart</span>
+                    <Link to="/Home">
+                        <span>shopCart</span>
+                    </Link>
                 </div>
                 <div className="navbar">
                     <Link to="/Cart">
@@ -104,7 +104,7 @@ const MainPage = () => {
 
                     <SortProducts />
 
-                        <SortByCategory setCopyProducts={setCopyProducts} />
+                    <SortByCategory setCopyProducts={setCopyProducts} />
                 </div>
 
 

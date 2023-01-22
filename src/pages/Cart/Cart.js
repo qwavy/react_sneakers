@@ -21,17 +21,18 @@ const Cart = () => {
 
     useEffect(() => {
         let sum = 0
-        for(let i = 0;i < products.cart.length;i++){
-            sum+=products.cart[i].price
+        for (let i = 0; i < products.cart.length; i++) {
+            sum += products.cart[i].price
             console.log(sum)
         }
         products.cart_total = sum
     }, [products.cart])
+    // сумма всех продуктов
 
     const HandleDeleteCart = (id) => {
         const objWithIdIndex = products.cart.findIndex((obj) => obj.id === id);
 
-        if(objWithIdIndex > -1){
+        if (objWithIdIndex > -1) {
             products.cart_total -= products.products[objWithIdIndex].price
         }
         if (objWithIdIndex > -1) {
@@ -46,7 +47,9 @@ const Cart = () => {
         <div className="container">
             <header>
                 <div className="logo">
-                    <span>shopCart</span>
+                    <Link to="/Home">
+                        <span>shopCart</span>
+                    </Link>
                 </div>
                 <div className="navbar">
                     <Link to="/Cart">
@@ -78,7 +81,7 @@ const Cart = () => {
                             <img src={trash_can} className="trash_can" onClick={() => HandleDeleteCart(product.id)} />
                         </div>
                     </div>
-                </div>) : <div className="empty_cart"><img src={no_cart}/><p>cart is empty</p></div>}
+                </div>) : <div className="empty_cart"><img src={no_cart} /><p>cart is empty</p></div>}
 
 
             </div>

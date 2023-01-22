@@ -30,13 +30,16 @@ const Profile = () => {
         const result = products.orderInformation.filter(order => order.email == products.user.email)
         setYourOrders(result)
     }, [products.orderInformation])
+    // добавление продукта в профиль с помощью сравнение почт
     return (
         <div className="container">
 
             {products.user ? <div className="container">
                 <header>
                     <div className="logo">
-                        <span>shopCart</span>
+                        <Link to="/Home">
+                            <span>shopCart</span>
+                        </Link>
                     </div>
                     <div className="navbar">
                         <Link to="/Cart">

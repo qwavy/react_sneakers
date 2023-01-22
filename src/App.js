@@ -29,12 +29,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <Link to="/Profile">Profile</Link>
-        <Link to="/Cart">Cart</Link>
-        <Link to="/Home">Home</Link>
-        <Link to="/Checkout">Checkout</Link>
-        <Link to="/Favourites">Favourites</Link>
-        <Link to="/AddProducts">AddProducts</Link>
+
       </div>
       <div>
         <Routes>

@@ -52,7 +52,9 @@ const Checkout = () => {
         <div className='container'>
             <header>
                 <div className="logo">
-                    <span>shopCart</span>
+                    <Link to="/Home">
+                        <span>shopCart</span>
+                    </Link>
                 </div>
                 <div className="navbar">
                     <Link to="/Cart">
@@ -105,7 +107,7 @@ const Checkout = () => {
                 <p className='red'>total {products.cart_total}</p>
                 <p className='green'>delivery 0</p>
             </div>
-            {products.user ? <button className='conform_button' onClick={CheckoutConform}>confirm</button> : <CustomAlert/>}
+            {products.user ? <button className='conform_button' onClick={CheckoutConform}>confirm</button> : <CustomAlert />}
 
         </div>
 
